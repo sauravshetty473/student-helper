@@ -8,6 +8,9 @@ class FormLogin extends StatelessWidget {
     return Column(
       children: [
         TextField(
+          style: const TextStyle(
+            fontSize: 18,
+          ),
           decoration: InputDecoration(
             hintText: 'Enter email id',
             fillColor: Colors.blueGrey[50],
@@ -30,6 +33,9 @@ class FormLogin extends StatelessWidget {
           height: 10,
         ),
         TextField(
+          style: const TextStyle(
+            fontSize: 18,
+          ),
           decoration: InputDecoration(
             hintText: 'Password',
             counterText: 'Forgot Password?',
@@ -74,7 +80,12 @@ class FormLogin extends StatelessWidget {
               width: double.infinity,
               height: 50,
               child: const Center(
-                child: Text('Sign In'),
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
               ),
             ),
             style: ElevatedButton.styleFrom(
@@ -101,7 +112,12 @@ class FormLogin extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: Text('Or continue with'),
+              child: Text(
+                'Or continue with',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
             ),
             Expanded(
               child: Divider(

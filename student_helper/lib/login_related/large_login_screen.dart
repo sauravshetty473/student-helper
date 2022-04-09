@@ -8,17 +8,17 @@ class LargeLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          width: deviceSize.width * 0.25,
+          width: deviceSize.width * 0.3,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
                 'Sign In to \nStudent Helper',
                 style: TextStyle(
-                  fontSize: 45,
+                  fontSize: 65,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,
@@ -31,6 +31,7 @@ class LargeLoginScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.black45,
                   fontWeight: FontWeight.bold,
+                  fontSize: 24,
                 ),
               ),
               const SizedBox(
@@ -44,6 +45,7 @@ class LargeLoginScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.bold,
+                      fontSize: 24,
                     ),
                   ),
                   SizedBox(
@@ -54,6 +56,7 @@ class LargeLoginScreen extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.deepPurple,
                       fontWeight: FontWeight.bold,
+                      fontSize: 24,
                     ),
                   ),
                 ],
@@ -63,18 +66,10 @@ class LargeLoginScreen extends StatelessWidget {
               ),
               Image.asset(
                 'images/reading.png',
-                height: 100,
+                height: 150,
                 width: 200,
               ),
             ],
-          ),
-        ),
-        Container(
-          width: deviceSize.width * 0.2,
-          child: Image.asset(
-            'images/united.png',
-            height: 300,
-            width: 300,
           ),
         ),
         Padding(
