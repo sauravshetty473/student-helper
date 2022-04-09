@@ -69,32 +69,32 @@ class LargeGrammarScreen extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _getDetailWidget('images/error.png', 'Grammatical Errors'),
-                const SizedBox(
-                  height: 40,
-                ),
-                _getDetailWidget('images/grammar_one.png', 'Spelling Errors'),
-              ],
-            ),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     _getDetailWidget('images/error.png', 'Grammatical Errors'),
+            //     const SizedBox(
+            //       height: 40,
+            //     ),
+            //     _getDetailWidget('images/grammar_one.png', 'Spelling Errors'),
+            //   ],
+            // ),
             Container(
               width: deviceSize.width * 0.5,
               child: InputTextBox(
                 textController: _Textcontroller,
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _getDetailWidget('images/target.png', 'Incorrect Punctuation'),
-                const SizedBox(
-                  height: 40,
-                ),
-                _getDetailWidget('images/grammar.png', 'Misused Words'),
-              ],
-            ),
+            // Column(
+            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //   children: [
+            //     _getDetailWidget('images/target.png', 'Incorrect Punctuation'),
+            //     const SizedBox(
+            //       height: 40,
+            //     ),
+            //     _getDetailWidget('images/grammar.png', 'Misused Words'),
+            //   ],
+            // ),
           ],
         ),
       ],
