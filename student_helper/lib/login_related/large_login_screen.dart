@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:student_helper/login_related/form_login.dart';
+import 'package:student_helper/login_related/large_signup_screen.dart';
 
 class LargeLoginScreen extends StatelessWidget {
   const LargeLoginScreen({Key? key}) : super(key: key);
@@ -39,8 +40,8 @@ class LargeLoginScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     'You can',
                     style: TextStyle(
                       color: Colors.black54,
@@ -48,15 +49,23 @@ class LargeLoginScreen extends StatelessWidget {
                       fontSize: 24,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    'Register',
-                    style: TextStyle(
-                      color: Colors.deepPurple,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
+                  GestureDetector(
+                    onTap: () {
+                      // print('Go to sign up');
+                      Navigator.of(context).pushNamed(
+                        LargeSignUpScreen.routeName,
+                      );
+                    },
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(
+                        color: Colors.deepPurple,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                      ),
                     ),
                   ),
                 ],
@@ -78,6 +87,7 @@ class LargeLoginScreen extends StatelessWidget {
             width: deviceSize.width * 0.25,
             child: const FormLogin(
               isSmallScreen: false,
+              isLogin: true,
             ),
           ),
         ),

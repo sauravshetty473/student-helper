@@ -76,6 +76,7 @@ class SmallLoginScreen extends StatelessWidget {
             margin: const EdgeInsets.all(25),
             child: const FormLogin(
               isSmallScreen: true,
+              isLogin: true,
             ),
           ),
         ],

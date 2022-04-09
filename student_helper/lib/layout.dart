@@ -13,9 +13,6 @@ class SiteLayout extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Student Helper'),
       ),
-      // drawer: Drawer(
-      //   child: SideMenu(),
-      // ),
       body: ResponsiveWidget(
         largeScreen: ListView(
           children: const [

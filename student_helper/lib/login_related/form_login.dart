@@ -4,8 +4,10 @@ class FormLogin extends StatelessWidget {
   const FormLogin({
     Key? key,
     required this.isSmallScreen,
+    required this.isLogin,
   }) : super(key: key);
   final bool isSmallScreen;
+  final bool isLogin;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class FormLogin extends StatelessWidget {
           ),
           decoration: InputDecoration(
             hintText: 'Password',
-            counterText: 'Forgot Password?',
+            counterText: isLogin ? 'Forgot Password?' : '',
             suffixIcon: const Icon(
               Icons.visibility_off_outlined,
               color: Colors.grey,
@@ -64,6 +66,37 @@ class FormLogin extends StatelessWidget {
           ),
         ),
         const SizedBox(
+          height: 10,
+        ),
+        !isLogin
+            ? TextField(
+                style: const TextStyle(
+                  fontSize: 18,
+                ),
+                decoration: InputDecoration(
+                  hintText: 'Confirm Password',
+                  fillColor: Colors.blueGrey[50],
+                  filled: true,
+                  labelStyle: const TextStyle(fontSize: 12),
+                  suffixIcon: const Icon(
+                    Icons.visibility_off_outlined,
+                    color: Colors.grey,
+                  ),
+                  contentPadding: const EdgeInsets.only(
+                    left: 30,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xFFECEFF1)),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: Color(0xFFECEFF1)),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+              )
+            : const SizedBox(),
+        const SizedBox(
           height: 40,
         ),
         Container(
@@ -83,10 +116,10 @@ class FormLogin extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: 50,
-              child: const Center(
+              child: Center(
                 child: Text(
-                  'Sign In',
-                  style: TextStyle(
+                  isLogin ? 'Sign In' : 'Sign Up',
+                  style: const TextStyle(
                     fontSize: 18,
                   ),
                 ),
