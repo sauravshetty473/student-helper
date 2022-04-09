@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_helper/grammer_checker/input_text_box.dart';
 
 class LargeGrammarScreen extends StatelessWidget {
   const LargeGrammarScreen({Key? key}) : super(key: key);
@@ -53,7 +54,7 @@ class LargeGrammarScreen extends StatelessWidget {
         Container(
           width: deviceSize.width * 0.5,
           child: const Text(
-            "Check your English text for grammar, spelling, and punctuation errors with Grammarly’s free grammar checker.",
+            "Check your English text for grammar errors with grammar checker.",
             style: TextStyle(
               color: Colors.black45,
               fontWeight: FontWeight.bold,
@@ -80,47 +81,8 @@ class LargeGrammarScreen extends StatelessWidget {
             ),
             Container(
               width: deviceSize.width * 0.5,
-              child: Center(
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextFormField(
-                        style: const TextStyle(
-                          fontSize: 20,
-                        ),
-                        controller: _Textcontroller,
-                        minLines: 8,
-                        maxLines: 8,
-                        keyboardType: TextInputType.multiline,
-                        decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.all(20.0),
-                          hintText: 'Enter Your Text Here',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 20,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 300,
-                      height: 50,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: const Text(
-                          "Check",
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
+              child: InputTextBox(
+                textController: _Textcontroller,
               ),
             ),
             Column(

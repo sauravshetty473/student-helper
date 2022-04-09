@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'grammer_checker/large_grammar_screen.dart';
+import 'grammer_checker/small_grammar_screen.dart';
 import 'helpers/responsiveness.dart';
 
 class GrammarLayout extends StatelessWidget {
@@ -18,11 +19,11 @@ class GrammarLayout extends StatelessWidget {
             LargeGrammarScreen(),
           ],
         ),
-        // smallScreen: ListView(
-        //   children: const [
-        //     SmallLoginScreen(),
-        //   ],
-        // ),
+        smallScreen: ListView(
+          children: const [
+            SmallGrammarScreen(),
+          ],
+        ),
       ),
     );
   }
