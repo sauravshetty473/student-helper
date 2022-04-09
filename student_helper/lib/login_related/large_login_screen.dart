@@ -76,7 +76,9 @@ class LargeLoginScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: deviceSize.height / 6),
           child: Container(
             width: deviceSize.width * 0.25,
-            child: const FormLogin(),
+            child: const FormLogin(
+              isSmallScreen: false,
+            ),
           ),
         ),
       ],

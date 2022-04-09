@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'helpers/responsiveness.dart';
 import 'login_related/large_login_screen.dart';
+import 'login_related/small_login_screen.dart';
 
 class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
@@ -19,6 +20,11 @@ class SiteLayout extends StatelessWidget {
         largeScreen: ListView(
           children: const [
             LargeLoginScreen(),
+          ],
+        ),
+        smallScreen: ListView(
+          children: const [
+            SmallLoginScreen(),
           ],
         ),
       ),
